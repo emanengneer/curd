@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/all.min.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="setylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="curd container w-75 shadow-lg my-3 ">
+         <div class="head text-center py-4">
+            <h2>CURD</h2>
+         </div>
+
+         <div class="input p-0  ">
+           <input id="titel" class="w-100 mb-4 form-control" placeholder="titel" type="text">
+           <div class=" d-flex justify-content-evenly ">
+              <input onclick="gettotal();" id="price" class="w-25 mx-2 rounded border form-control" placeholder="price" type="number">
+              <input onclick="gettotal();" id="taxes" class=" w-25  mx-2 rounded border form-control" placeholder="taxes" type="number">
+              <input onclick="gettotal();" id="ads" class="w-25 mx-2 rounded border form-control " placeholder="ads" type="number">
+              <input onclick="gettotal();" id="descount" class="w-25 mx-2 rounded-2 form-control border " placeholder="descount" type="number">
+              <small onclick="gettotal();" id="total" class=" my-2 btn btn-outline-danger">total</small>
+           </div>
+          
+              <div class="py-4">
+                <input placeholder="count" class="w-100 mb-4 form-control" type="number" id="count">
+              <input placeholder="catogory" class="w-100 mb-4 form-control" type="text" id="catogory">
+              <button class="btn btn-outline-danger w-100"onclick="addclic();" id="submit">Create</button>
+
+              </div>
+
+         </div>
+
+
+         <div class="output">
+             <div class="saerch">
+                <input onkeyup=" searchDate(this.value);"  id="saerch" type="text" class="w-100 form-control mb-4" placeholder="saerch">
+                <div class="saerchbtn d-flex ">
+                   <button onclick="getSerchMood(this.id)" id="searchtitel"  class="w-50 btn mx-2 btn-outline-primary">search by titel</button>
+                   <button onclick="getSerchMood(this.id)" id="searchcatogory"class="w-50 mx-2 btn btn-outline-primary" >search by catogory</button>
+                </div>
+             </div>
+         </div>
+
+    </div>
+
+    <div class="w-75 mx-auto my-3 ">
+
+      <div id="deletall">
+         
+      </div>
+        <table class="table table-hover table-striped text-center ">
+           <thead>
+              <th>Id</th>
+              <th>Titel</th>
+              <th>Price</th>
+              <th>Taxes</th>
+              <th>Ads</th>
+              <th>Descount</th>
+              <th>Total</th>
+              <th>count</th>
+              <th>Ctogory</th>
+              <th>Update</th>
+              <th>Delete</th>
+           </thead>
+  
+           <tbody id='tbody' class="bg-ligt">
+              
+           </tbody >
+        </table>
+  </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
